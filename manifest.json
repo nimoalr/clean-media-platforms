@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Clean Media Platforms",
+  "version": "0.1.0",
+  "description": "Customize social media websites to your liking",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["youtube/youtube.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {}
+}
