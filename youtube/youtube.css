@@ -1,0 +1,10 @@
+/* ===========================
+   Clean Media Platforms - YouTube
+   =========================== */
+
+/* --- Hide Shorts section from homepage --- */
+/* Shorts shelf on the home feed */
+ytd-rich-shelf-renderer[is-shorts],
+ytd-reel-shelf-renderer {
+  display: none !important;
+}
