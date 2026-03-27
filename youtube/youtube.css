@@ -13,3 +13,8 @@ ytd-reel-shelf-renderer {
 ytd-guide-section-renderer:has(#guide-section-title):has(a[href*="youtube.com/premium"], a[title="YouTube Music"], a[title="YouTube Kids"]) {
   display: none !important;
 }
+
+/* --- Hide "What did you think of this video?" survey --- */
+ytd-inline-survey-renderer {
+  display: none !important;
+}
