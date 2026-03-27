@@ -1,0 +1,26 @@
+name: Release Extension
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set version from run number
+        run: jq --arg v "0.1.${{ github.run_number }}" '.version = $v' manifest.json > tmp.json && mv tmp.json manifest.json
+
+      - name: Package extension
+        run: zip -r clean-media-platforms.zip manifest.json LICENSE README.md youtube/ x/ instagram/
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "v0.1.${{ github.run_number }}" clean-media-platforms.zip --generate-notes

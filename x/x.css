@@ -1,0 +1,32 @@
+/* ===========================
+   Clean Media Platforms - X (Twitter)
+   =========================== */
+
+/* --- Hide "Upgrade to Premium+" sidebar card and its parent container/separator --- */
+aside[role="complementary"][aria-label*="Premium"],
+div:has(> aside[role="complementary"][aria-label*="Premium"]) {
+  display: none !important;
+}
+
+/* --- Hide Premium upsell dialogs/popups --- */
+div[data-testid="sheetDialog"]:has(a[href*="premium"]),
+div[data-testid="sheetDialog"]:has(a[href*="verified"]) {
+  display: none !important;
+}
+
+/* Backdrop behind the sheet dialog */
+div[data-testid="mask"]:has(+ div[data-testid="sheetDialog"]) {
+  display: none !important;
+}
+
+div[role="dialog"]:has(a[href*="premium"]) {
+  display: none !important;
+}
+
+/* --- Swap "For you" and "Following" tab order --- */
+div[role="tablist"] > div[role="presentation"]:first-child {
+  order: 2 !important;
+}
+div[role="tablist"] > div[role="presentation"]:last-child {
+  order: 1 !important;
+}

@@ -9,6 +9,18 @@
       "matches": ["*://www.youtube.com/*"],
       "css": ["youtube/youtube.css"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["*://x.com/*", "*://twitter.com/*"],
+      "css": ["x/x.css"],
+      "js": ["x/x.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://www.instagram.com/*"],
+      "css": ["instagram/instagram.css"],
+      "js": ["instagram/instagram.js"],
+      "run_at": "document_start"
     }
   ],
   "icons": {}

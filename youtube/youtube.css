@@ -8,3 +8,8 @@ ytd-rich-shelf-renderer[is-shorts],
 ytd-reel-shelf-renderer {
   display: none !important;
 }
+
+/* --- Hide "More from YouTube" sidebar section --- */
+ytd-guide-section-renderer:has(#guide-section-title):has(a[href*="youtube.com/premium"], a[title="YouTube Music"], a[title="YouTube Kids"]) {
+  display: none !important;
+}

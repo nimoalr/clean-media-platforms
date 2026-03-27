@@ -1,0 +1,16 @@
+/* ===========================
+   Clean Media Platforms - Instagram
+   =========================== */
+
+/* --- Fix right sidebar being clipped behind the fixed header --- */
+div.x1dr59a3.x13vifvy.x7vhb2i.x6bx242 {
+  padding-top: 55px !important;
+}
+
+/* --- Swap "Pour vous" / "For you" and "Suivi(e)" / "Following" tab order --- */
+div[role="tablist"] > div:first-child {
+  order: 2 !important;
+}
+div[role="tablist"] > div:last-child {
+  order: 1 !important;
+}
